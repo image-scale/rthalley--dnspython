@@ -1,19 +1,19 @@
 # Acceptance Criteria
 
-## Tasks 1-3: Completed (see progress.md)
+## Tasks 1-5: Completed (see progress.md)
 
-## Task 4: Record collections and DNS messages
+## Task 6: Tokenizer and zone file parsing
 
 ### Acceptance Criteria
-- [ ] An RRDataSet holds multiple record data objects of the same type/class with a shared TTL
-- [ ] Adding a record with different TTL uses the minimum TTL
-- [ ] RRDataSets can be converted to text showing all records
-- [ ] An RRSet associates an owner name with an RRDataSet
-- [ ] RRSets can be created from text, from individual rdata, or from lists
-- [ ] A ZoneNode holds multiple RRDataSets for different types at a single name
-- [ ] DNS messages have question, answer, authority, and additional sections
-- [ ] Messages have an ID, flags, opcode, and rcode
-- [ ] A query message can be created for a name/type/class combination
-- [ ] Messages can be converted to text showing all sections
-- [ ] Messages track the QR flag to distinguish queries from responses
-- [ ] The find_rrset method locates an RRSet in a message section by name/type/class
+- [ ] Tokenizer reads identifiers (unquoted tokens) from text
+- [ ] Tokenizer handles quoted strings preserving spaces inside quotes
+- [ ] Tokenizer handles semicolon comments (rest of line ignored)
+- [ ] Tokenizer supports parentheses for multi-line grouping
+- [ ] Tokenizer handles backslash escape sequences (\\DDD and \\X)
+- [ ] Tokenizer recognizes end-of-line and end-of-file
+- [ ] Zone file parser processes $ORIGIN directive to set the origin
+- [ ] Zone file parser processes $TTL directive to set default TTL
+- [ ] Zone file parser reads resource records with owner, TTL, class, type, and rdata
+- [ ] Zone file parser handles @ as the current origin name
+- [ ] Zone file parser handles blank owner names (continuation of previous owner)
+- [ ] Zone file parser produces a collection of (name, rdataset) pairs
