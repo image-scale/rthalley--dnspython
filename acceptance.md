@@ -1,23 +1,19 @@
 # Acceptance Criteria
 
-## Task 1: DNS name handling
-- [x] All 15 criteria met (see Round 1)
+## Tasks 1-3: Completed (see progress.md)
 
-## Task 2: DNS type system and protocol constants
+## Task 4: Record collections and DNS messages
 
 ### Acceptance Criteria
-- [ ] Record types can be created from text ("A" -> type 1) and converted back to text
-- [ ] Unknown type numbers use "TYPENN" format (e.g., TYPE999)
-- [ ] Standard types include A (1), AAAA (28), CNAME (5), MX (15), NS (2), PTR (12), SOA (6), TXT (16), SRV (33)
-- [ ] Meta types like ANY (255), AXFR (252), OPT (41) are recognized and identifiable as meta
-- [ ] Record classes can be created from text ("IN" -> class 1) and converted back
-- [ ] Unknown class numbers use "CLASSNN" format
-- [ ] Standard classes include IN (1), CH (3), HS (4), NONE (254), ANY (255)
-- [ ] Meta classes (ANY, NONE) are identifiable
-- [ ] DNS message flags (QR, AA, TC, RD, RA, AD, CD) can be set, read, and converted to/from text
-- [ ] Operation codes (QUERY=0, STATUS=2, NOTIFY=4, UPDATE=5) can be created from text, converted to text, and extracted from message flags
-- [ ] Response codes (NOERROR=0, FORMERR=1, SERVFAIL=2, NXDOMAIN=3, REFUSED=5) support text conversion and extraction from flags
-- [ ] Extended response codes use both message flags (low 4 bits) and EDNS flags (high 8 bits)
-- [ ] TTL parsing supports integer values and BIND time strings like "1h30m", "1w2d", "300"
-- [ ] TTL values are validated (0 to 2^32-1)
-- [ ] Invalid TTL strings raise appropriate errors
+- [ ] An RRDataSet holds multiple record data objects of the same type/class with a shared TTL
+- [ ] Adding a record with different TTL uses the minimum TTL
+- [ ] RRDataSets can be converted to text showing all records
+- [ ] An RRSet associates an owner name with an RRDataSet
+- [ ] RRSets can be created from text, from individual rdata, or from lists
+- [ ] A ZoneNode holds multiple RRDataSets for different types at a single name
+- [ ] DNS messages have question, answer, authority, and additional sections
+- [ ] Messages have an ID, flags, opcode, and rcode
+- [ ] A query message can be created for a name/type/class combination
+- [ ] Messages can be converted to text showing all sections
+- [ ] Messages track the QR flag to distinguish queries from responses
+- [ ] The find_rrset method locates an RRSet in a message section by name/type/class
