@@ -1,17 +1,17 @@
 # Acceptance Criteria
 
-## Tasks 1-6: Completed (see progress.md)
+## Tasks 1-7: Completed (see progress.md)
 
-## Task 7: DNS zone management
+## Task 8: Stub resolver
 
 ### Acceptance Criteria
-- [ ] A Zone object stores DNS data as a mapping of names to nodes
-- [ ] Zones can be loaded from zone file text using from_text()
-- [ ] Zones have an origin name and a default rdclass
-- [ ] Finding a node by name returns its rdatasets
-- [ ] Finding a non-existent node returns None or raises KeyError
-- [ ] Zone data can be iterated (names and nodes)
-- [ ] Zones can be exported to text format matching zone file syntax
-- [ ] Adding/removing records and rdatasets from zones works
-- [ ] Zones validate the presence of SOA and NS records at the origin
-- [ ] Zones support the dict-like interface (len, contains, getitem)
+- [x] A Resolver class can be created with default or custom nameserver addresses
+- [x] Resolver can read nameserver configuration from resolv.conf format text
+- [x] resolv.conf parsing extracts nameserver addresses and search/domain directives
+- [x] Resolver.resolve(name, rdtype) sends a DNS query and returns an Answer object
+- [x] The Answer object provides access to the RRSet with the response records
+- [x] NXDOMAIN responses raise a specific NXDOMAINError exception
+- [x] NoAnswer responses (empty answer section) raise a NoAnswerError exception
+- [x] The resolver uses UDP transport by default
+- [x] The resolver retries with different nameservers on failure
+- [x] Search list is applied when configured and the name has no dots

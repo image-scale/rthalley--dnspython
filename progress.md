@@ -27,3 +27,31 @@
 **Commit**: Add record collections and DNS message construction
 **Acceptance**: 12/12 criteria met
 **Verification**: tests FAIL on previous state, PASS on current state
+
+## Round 5
+**Task**: Task 5 — Wire format serialization and parsing
+**Files created**: dnscore/wire_format.py, tests/test_wire_format.py
+**Commit**: Add DNS wire format serialization and parsing
+**Acceptance**: All criteria met
+**Verification**: tests FAIL on previous state, PASS on current state
+
+## Round 6
+**Task**: Task 6 — Tokenizer and zone file parsing
+**Files created**: dnscore/tokenizer.py, dnscore/zone_parser.py, tests/test_tokenizer_zone.py
+**Commit**: Add DNS zone file tokenizer and parser
+**Acceptance**: All criteria met
+**Verification**: tests FAIL on previous state, PASS on current state
+
+## Round 7
+**Task**: Task 7 — DNS zone management
+**Files created**: dnscore/zone.py, tests/test_zone.py
+**Commit**: Add DNS zone management
+**Acceptance**: All criteria met
+**Verification**: tests FAIL on previous state, PASS on current state
+
+## Round 8
+**Task**: Task 8 — Stub resolver
+**Files created**: dnscore/resolver.py, tests/test_resolver.py
+**Commit**: Add DNS stub resolver with resolv.conf support
+**Acceptance**: 10/10 criteria met
+**Verification**: tests FAIL on previous state, PASS on current state
