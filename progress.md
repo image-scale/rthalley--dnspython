@@ -55,3 +55,10 @@
 **Commit**: Add DNS stub resolver with resolv.conf support
 **Acceptance**: 10/10 criteria met
 **Verification**: tests FAIL on previous state, PASS on current state
+
+## Round 9
+**Task**: Task 9 — Reverse DNS and utility features
+**Files created**: dnscore/reversename.py, dnscore/serial.py, dnscore/e164.py, tests/test_utilities.py
+**Commit**: Add reverse DNS, serial number arithmetic, and E.164 conversion
+**Acceptance**: 10/10 criteria met
+**Verification**: tests FAIL on previous state, PASS on current state
