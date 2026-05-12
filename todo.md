@@ -13,4 +13,4 @@ Implement the DNS toolkit top-down starting with the most important user-facing 
 - [x] Task 7: DNS zone management — zone class for managing DNS zone data as a mapping of names to nodes, node lookups, iteration, zone file text output, zone validation for SOA and NS records (zone module + tests)
 - [x] Task 8: Stub resolver — high-level DNS resolver for looking up records using system nameservers, configuration from resolv.conf, search list support, NXDOMAIN and NoAnswer handling (resolver module + tests)
 - [x] Task 9: Reverse DNS and utility features — convert IP addresses to reverse DNS names (in-addr.arpa, ip6.arpa) and back, serial number arithmetic with wraparound per RFC 1982, E.164 phone number to ENUM name conversion (reversename/serial/e164 modules + tests)
-- [ ] Task 10: Dynamic DNS updates — create DNS UPDATE messages for adding, deleting, and replacing records in a zone, with prerequisite conditions (update module + tests)
+- [x] Task 10: Dynamic DNS updates — create DNS UPDATE messages for adding, deleting, and replacing records in a zone, with prerequisite conditions (update module + tests)

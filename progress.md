@@ -62,3 +62,10 @@
 **Commit**: Add reverse DNS, serial number arithmetic, and E.164 conversion
 **Acceptance**: 10/10 criteria met
 **Verification**: tests FAIL on previous state, PASS on current state
+
+## Round 10
+**Task**: Task 10 — Dynamic DNS updates
+**Files created**: dnscore/update.py, tests/test_update.py
+**Commit**: Add DNS dynamic update message construction
+**Acceptance**: 11/11 criteria met
+**Verification**: tests FAIL on previous state, PASS on current state

@@ -29,3 +29,18 @@
 - [x] from_e164() converts a phone number string to an ENUM DNS name under e164.arpa
 - [x] to_e164() converts an ENUM DNS name back to a phone number string
 - [x] Non-digit characters in E.164 input are silently stripped
+
+## Task 10: Dynamic DNS updates
+
+### Acceptance Criteria
+- [x] UpdateMessage creates a message with UPDATE opcode and SOA zone entry
+- [x] present(name) adds a prerequisite that the name exists
+- [x] present(name, rdtype) adds a prerequisite that the rdtype exists at name
+- [x] present(name, rdtype, rdata) adds a prerequisite for specific records
+- [x] absent(name) adds a prerequisite that the name does not exist
+- [x] absent(name, rdtype) adds a prerequisite that the rdtype does not exist
+- [x] add(name, ttl, rdtype, rdata) adds records to the update section
+- [x] delete(name) deletes all records at name
+- [x] delete(name, rdtype) deletes all records of a type
+- [x] delete(name, rdtype, rdata) deletes specific records
+- [x] replace(name, ttl, rdtype, rdata) replaces all records of a type
